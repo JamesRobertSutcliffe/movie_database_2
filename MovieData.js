@@ -34,6 +34,5 @@ let movieData = {
   },
 };
   
-
-  export default movieData
+export default movieData
   

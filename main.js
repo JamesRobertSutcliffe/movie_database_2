@@ -72,7 +72,7 @@ function sortByYear() {
 const sortYearBtn = document.getElementById('btn3')
 sortYearBtn.addEventListener('click', sortByYear)
 
-// New Movie function allows the creation new object by user //
+// New Movie function allows the creation new object by user // re-edit newMoveie function using constructor?
 
 function newMovie(){
   const newName = document.getElementById("mName").value

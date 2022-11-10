@@ -18,8 +18,7 @@ function displayMovie(movie) {
   const yearEl = document.createElement("p")
   const runtimeEl = document.createElement("p")
   const ratingEl = document.createElement("p")
-  
-  
+    
   nameEl.textContent = movie[0]
   plotEl.textContent = "Plot: " + movie[1].plot
   castEl.textContent = "Cast: " + movie[1].cast

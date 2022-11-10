@@ -1,11 +1,10 @@
 import movieData from "./MovieData.js"
 
-let movieDataKeys = Object.keys(movieData);
+// movieDataEntries variable converts the object to an array //
+
 let movieDataEntries = Object.entries(movieData);
-let movieDataValues = Object.values(movieData);
 
 
-console.log()
 // below code renders the movie data object to the html page //
 
 const moviesContainer = document.querySelector("ul")
@@ -72,9 +71,10 @@ function sortByYear() {
 const sortYearBtn = document.getElementById('btn3')
 sortYearBtn.addEventListener('click', sortByYear)
 
-// New Movie function allows the creation new object by user using a constructor, then concatenating this new object onto the movie name and pushing
-// to our source array of objects //
+//The below code allows the user to input a new movie// 
 
+
+// Below is a constructor function that allows up to create the template for a new object
 
 class newMoveEntry {
   constructor(plot, cast, year, runtime, rating) {
@@ -85,6 +85,9 @@ class newMoveEntry {
     this.rating = rating;
   }
 }
+
+// new movie function declares the content of variables using dom maniplulation - these variables then fill the constructor to create a 
+// new array which is pushed onto the source object (converted into array) and rendered onto the page // 
 
 function newMovie(){
   const newName = document.getElementById("mName").value
@@ -98,16 +101,12 @@ function newMovie(){
   const newMovieArray = [newName, newMoveEntryData]
   movieDataEntries.push(newMovieArray)
   displayMovie(newMovieArray)
-    
-  // let newMovieDataObj = {'name': newName, 'plot': newPlot, 'cast': newCast, 'year': newYear, 'runtime': newRuntime, 'rating': newRating}
-  // movieDataEntries.push(newMovieDataObj)
-  // displayMovie (newMovieDataObj)
-    
-  // console.log(movieData)
    }
 
   const submitNewMovie = document.getElementById("newMovieSubmit");
   submitNewMovie.addEventListener("click", newMovie);
 
   
-  // console.log(movieData)
+  // To do next: 
+  // Improve style using CSS
+  // Allow form to only accept numbers where relevant and in between certain ranges - movie name must be input 
